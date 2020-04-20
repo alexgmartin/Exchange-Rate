@@ -6,15 +6,13 @@ const amountEl_two = document.getElementById('amount-two');
 const rateEl = document.getElementById('rate');
 const swap = document.getElementById('swap');
 
-const myAPIKey = myConfig.MYAPIKEY;
-
 
 // Fetch exchange rates ad update the DOM
 function calculate() {
   const currency_one = currencyEl_one.value;
   const currency_two = currencyEl_two.value;
 
-  fetch(`https://prime.exchangerate-api.com/v5/${myAPIKey}/latest/${currency_one}`)
+  fetch(`https://prime.exchangerate-api.com/v5/19fa2d59f48a2df6c2f5253c/latest/${currency_one}`)
     .then(res => res.json())
     .then(data => {
       // console.log(data);
